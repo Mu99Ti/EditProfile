@@ -16,7 +16,7 @@ var window: UIWindow?
         let viewController = ViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         viewController.title = "Edit Profile"
-        viewController.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Outfit-SemiBold", size: 16)]
+        viewController.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Outfit-SemiBold", size: 16) as Any]
         window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = navigationController

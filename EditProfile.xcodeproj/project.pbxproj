@@ -22,6 +22,9 @@
 		7B2C4A7A2A1DFDA800173E45 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4A712A1DFDA800173E45 /* Outfit-ExtraLight.ttf */; };
 		7B2C4A7B2A1DFDA800173E45 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4A722A1DFDA800173E45 /* Outfit-Medium.ttf */; };
 		7B2C4A7D2A1E0D0400173E45 /* ValueTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4A7C2A1E0D0400173E45 /* ValueTextField.swift */; };
+		7B6E351A2A1F1817002A7E9F /* LeftNavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E35192A1F1817002A7E9F /* LeftNavigationItemView.swift */; };
+		7B6E351C2A1F2618002A7E9F /* CalendarInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */; };
+		7B6E351F2A1F64E9002A7E9F /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E351E2A1F64E9002A7E9F /* DateTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		7B2C4A712A1DFDA800173E45 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
 		7B2C4A722A1DFDA800173E45 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Medium.ttf"; sourceTree = "<group>"; };
 		7B2C4A7C2A1E0D0400173E45 /* ValueTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextField.swift; sourceTree = "<group>"; };
+		7B6E35192A1F1817002A7E9F /* LeftNavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNavigationItemView.swift; sourceTree = "<group>"; };
+		7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInputView.swift; sourceTree = "<group>"; };
+		7B6E351E2A1F64E9002A7E9F /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,8 @@
 		7B2C4A442A1DFA0B00173E45 = {
 			isa = PBXGroup;
 			children = (
-				7B2C4A682A1DFD7B00173E45 /* Resources */,
 				7B2C4A4F2A1DFA0B00173E45 /* EditProfile */,
+				7B2C4A682A1DFD7B00173E45 /* Resources */,
 				7B2C4A4E2A1DFA0B00173E45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +81,16 @@
 		7B2C4A4F2A1DFA0B00173E45 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */,
 				7B2C4A502A1DFA0B00173E45 /* AppDelegate.swift */,
 				7B2C4A542A1DFA0B00173E45 /* ViewController.swift */,
 				7B2C4A642A1DFB2900173E45 /* EditFieldView.swift */,
-				7B2C4A662A1DFB8B00173E45 /* Extensions.swift */,
+				7B6E35192A1F1817002A7E9F /* LeftNavigationItemView.swift */,
 				7B2C4A7C2A1E0D0400173E45 /* ValueTextField.swift */,
+				7B6E351E2A1F64E9002A7E9F /* DateTextField.swift */,
 				7B2C4A592A1DFA0D00173E45 /* Assets.xcassets */,
 				7B2C4A5E2A1DFA0D00173E45 /* Info.plist */,
+				7B6E351D2A1F3F19002A7E9F /* Extensions */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -108,6 +117,14 @@
 				7B2C4A6D2A1DFDA800173E45 /* Outfit-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7B6E351D2A1F3F19002A7E9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C4A662A1DFB8B00173E45 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +208,11 @@
 				7B2C4A7D2A1E0D0400173E45 /* ValueTextField.swift in Sources */,
 				7B2C4A652A1DFB2900173E45 /* EditFieldView.swift in Sources */,
 				7B2C4A552A1DFA0B00173E45 /* ViewController.swift in Sources */,
+				7B6E351C2A1F2618002A7E9F /* CalendarInputView.swift in Sources */,
 				7B2C4A512A1DFA0B00173E45 /* AppDelegate.swift in Sources */,
+				7B6E351F2A1F64E9002A7E9F /* DateTextField.swift in Sources */,
 				7B2C4A672A1DFB8B00173E45 /* Extensions.swift in Sources */,
+				7B6E351A2A1F1817002A7E9F /* LeftNavigationItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

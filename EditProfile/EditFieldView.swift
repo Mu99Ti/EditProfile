@@ -9,11 +9,10 @@ import UIKit
 
 class EditFieldView: UIView {
     
-    // MARK: - Public Properties
-    
     // MARK: - Private Properties
     private lazy var titleLabel = UILabel.makeForLabelView(textAlignment: .left, font: UIFont(name: "Outfit-SemiBold", size: 14), textColor: .black)
     private lazy var valueTextField = ValueTextField()
+    private lazy var dateTextField = DateTextField()
     private lazy var mainStackView = UIStackView.makeForStackView(axis: .vertical, spacing: 12, alignment: .leading, distribution: .fillProportionally)
     
     // MARK: - Initializing View
@@ -50,13 +49,19 @@ class EditFieldView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, textFieldPlaceHolder: String, calendar: Bool? = false) {
+    convenience init(title: String, textFieldPlaceHolder: String? = nil) {
         self.init(frame: .zero)
         
         titleLabel.text = title
         valueTextField.placeholder = textFieldPlaceHolder
-        if let calendar {
-            valueTextField.isCalendarShown = calendar
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == self {
+            return false
         }
+        return true
     }
 }
+
+

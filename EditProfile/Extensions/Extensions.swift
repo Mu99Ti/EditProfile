@@ -19,6 +19,18 @@ extension UIStackView {
     }
 }
 
+extension UILabel {
+    static func makeForLabelView(text: String? = nil, textAlignment: NSTextAlignment = .left, font: UIFont? = UIFont(name: "Arial", size: 10), textColor: UIColor = .black) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = textAlignment
+        label.text = text
+        label.font = font
+        label.textColor = textColor
+        return label
+    }
+}
+
 extension UIStackView {
     func removeAllArrangedSubviews() {
         let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
@@ -34,14 +46,6 @@ extension UIStackView {
     }
 }
 
-extension UILabel {
-    static func makeForLabelView(text: String? = nil, textAlignment: NSTextAlignment = .left, font: UIFont? = UIFont(name: "Arial", size: 10), textColor: UIColor = .black) -> UILabel {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = textAlignment
-        label.text = text
-        label.font = font
-        label.textColor = textColor
-        return label
-    }
-}
+
+
+
