@@ -7,12 +7,12 @@
 
 import UIKit
 
-class DateTextField: UITextField {
+class DateTextField: UITextField, UITextFieldDelegate {
     
     // MARK: - Private Properties
     private var padding: UIEdgeInsets = UIEdgeInsets(top: 13.5, left: 12, bottom: 13.5, right: 12)
     
-    private lazy var containerView: UIView = {
+    private let containerView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 24))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -28,9 +28,11 @@ class DateTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // MARK: - Add Subviews
         containerView.addSubview(calendarImageView)
         
         configure()
+        textFieldShouldBeginEditing(self)
     }
     
     @available(*, unavailable)
@@ -58,5 +60,13 @@ class DateTextField: UITextField {
         layer.borderWidth = 1
         self.rightViewMode = .always
         self.rightView = containerView
+        self.delegate = self
+    }
+    
+    internal func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == self {
+            return false
+        }
+        return true
     }
 }

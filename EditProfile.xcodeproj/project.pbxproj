@@ -23,7 +23,6 @@
 		7B2C4A7B2A1DFDA800173E45 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4A722A1DFDA800173E45 /* Outfit-Medium.ttf */; };
 		7B2C4A7D2A1E0D0400173E45 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4A7C2A1E0D0400173E45 /* TextField.swift */; };
 		7B6E351A2A1F1817002A7E9F /* LeftNavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E35192A1F1817002A7E9F /* LeftNavigationItemView.swift */; };
-		7B6E351C2A1F2618002A7E9F /* CalendarInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */; };
 		7B6E351F2A1F64E9002A7E9F /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E351E2A1F64E9002A7E9F /* DateTextField.swift */; };
 		7B6E35212A1F6985002A7E9F /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E35202A1F6985002A7E9F /* TextFieldType.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		7B2C4A722A1DFDA800173E45 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Medium.ttf"; sourceTree = "<group>"; };
 		7B2C4A7C2A1E0D0400173E45 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		7B6E35192A1F1817002A7E9F /* LeftNavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNavigationItemView.swift; sourceTree = "<group>"; };
-		7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInputView.swift; sourceTree = "<group>"; };
 		7B6E351E2A1F64E9002A7E9F /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
 		7B6E35202A1F6985002A7E9F /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +82,6 @@
 		7B2C4A4F2A1DFA0B00173E45 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
-				7B6E351B2A1F2618002A7E9F /* CalendarInputView.swift */,
 				7B2C4A502A1DFA0B00173E45 /* AppDelegate.swift */,
 				7B2C4A542A1DFA0B00173E45 /* ViewController.swift */,
 				7B2C4A642A1DFB2900173E45 /* EditFieldView.swift */,
@@ -211,7 +208,6 @@
 				7B2C4A7D2A1E0D0400173E45 /* TextField.swift in Sources */,
 				7B2C4A652A1DFB2900173E45 /* EditFieldView.swift in Sources */,
 				7B2C4A552A1DFA0B00173E45 /* ViewController.swift in Sources */,
-				7B6E351C2A1F2618002A7E9F /* CalendarInputView.swift in Sources */,
 				7B6E35212A1F6985002A7E9F /* TextFieldType.swift in Sources */,
 				7B2C4A512A1DFA0B00173E45 /* AppDelegate.swift in Sources */,
 				7B6E351F2A1F64E9002A7E9F /* DateTextField.swift in Sources */,

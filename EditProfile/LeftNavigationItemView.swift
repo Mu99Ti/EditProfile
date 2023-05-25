@@ -9,6 +9,7 @@ import UIKit
 
 class LeftNavigationItemView: UIView {
     
+    // MARK: - Private Properties
     private lazy var navigationItemBackButton: UIButton = {
         let button = UIButton()
         let buttonImage = UIImage(named: "BackButton")
@@ -24,14 +25,17 @@ class LeftNavigationItemView: UIView {
     
     private lazy var mainStackView = UIStackView.makeForStackView(axis: .horizontal, spacing: 0, alignment: .leading, distribution: .fillProportionally)
     
+    // MARK: - Initializing View
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // MARK: - Add Subviews
         addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(navigationItemPaddingView)
         mainStackView.addArrangedSubview(navigationItemBackButton)
         
+        // MARK: - Setup Constraints
         let paddingViewSizeConstraints = [
             navigationItemPaddingView.heightAnchor.constraint(equalToConstant: 24),
             navigationItemPaddingView.widthAnchor.constraint(equalToConstant: 9)
@@ -58,5 +62,6 @@ class LeftNavigationItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private Methods
     @objc private func buttonTapped() {}
 }

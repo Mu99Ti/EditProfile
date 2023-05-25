@@ -69,7 +69,8 @@ class EditFieldView: UIView {
         }
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    // MARK: - Private Methods
+    private func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == self {
             return false
         }
