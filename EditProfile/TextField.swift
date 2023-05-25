@@ -7,15 +7,10 @@
 
 import UIKit
 
-class DateFieldView: UIView, UITextFieldDelegate {
+class TextField: UITextField {
     
     // MARK: - Private Properties
     private var padding: UIEdgeInsets = UIEdgeInsets(top: 13.5, left: 12, bottom: 13.5, right: 12)
-    
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
     
     // MARK: - Initializing View
     override init(frame: CGRect) {

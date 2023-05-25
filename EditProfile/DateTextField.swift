@@ -13,7 +13,8 @@ class DateTextField: UITextField {
     private var padding: UIEdgeInsets = UIEdgeInsets(top: 13.5, left: 12, bottom: 13.5, right: 12)
     
     private lazy var containerView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 24))
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     

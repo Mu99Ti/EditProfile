@@ -11,7 +11,7 @@ class EditFieldView: UIView {
     
     // MARK: - Private Properties
     private lazy var titleLabel = UILabel.makeForLabelView(textAlignment: .left, font: UIFont(name: "Outfit-SemiBold", size: 14), textColor: .black)
-    private lazy var valueTextField = ValueTextField()
+    private lazy var valueTextField = TextField()
     private lazy var dateTextField = DateTextField()
     private lazy var mainStackView = UIStackView.makeForStackView(axis: .vertical, spacing: 12, alignment: .leading, distribution: .fillProportionally)
     
@@ -22,7 +22,7 @@ class EditFieldView: UIView {
         // MARK: - Add Subviews
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
-        mainStackView.addArrangedSubview(valueTextField)
+        
         
         // MARK: - Setup Constraints
         let mainStackConstraints = [
@@ -37,8 +37,14 @@ class EditFieldView: UIView {
             valueTextField.widthAnchor.constraint(equalToConstant: 335)
         ]
         
+        let dateTextFieldSizeConstraint = [
+            dateTextField.heightAnchor.constraint(equalToConstant: 48),
+            dateTextField.widthAnchor.constraint(equalToConstant: 335)
+        ]
+        
         NSLayoutConstraint.activate(mainStackConstraints)
         NSLayoutConstraint.activate(valueTextFieldSizeConstraint)
+        NSLayoutConstraint.activate(dateTextFieldSizeConstraint)
         
         // MARK: - Configure View
         backgroundColor = .systemBackground
@@ -49,11 +55,18 @@ class EditFieldView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, textFieldPlaceHolder: String? = nil) {
+    convenience init(title: String, textFieldPlaceHolder: String? = nil, _ textFieldType: TextFieldType) {
         self.init(frame: .zero)
-        
-        titleLabel.text = title
-        valueTextField.placeholder = textFieldPlaceHolder
+        switch textFieldType {
+        case .text:
+            self.mainStackView.addArrangedSubview(valueTextField)
+            titleLabel.text = title
+            valueTextField.placeholder = textFieldPlaceHolder
+        case .date:
+            self.mainStackView.addArrangedSubview(dateTextField)
+            titleLabel.text = title
+            dateTextField.placeholder = textFieldPlaceHolder
+        }
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

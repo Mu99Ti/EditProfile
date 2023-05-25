@@ -14,14 +14,13 @@ class ViewController: UIViewController {
     private lazy var leftNavigationItemView = LeftNavigationItemView()
     
     private lazy var editDateOfBirthView: EditFieldView = {
-        let editView = EditFieldView(title: "Date of Birth", textFieldPlaceHolder: "MM/DD/YY", calendar: true)
+        let editView = EditFieldView(title: "Date of Birth", textFieldPlaceHolder: "MM/DD/YY", .date)
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
-        
         return editView
     }()
-    private lazy var editCountryView = EditFieldView(title: "Country", textFieldPlaceHolder: "Example: United Kingdom")
-    private lazy var editCityView = EditFieldView(title: "City", textFieldPlaceHolder: "Example: London")
+    private lazy var editCountryView = EditFieldView(title: "Country", textFieldPlaceHolder: "Example: United Kingdom", .text)
+    private lazy var editCityView = EditFieldView(title: "City", textFieldPlaceHolder: "Example: London", .text)
     
     private lazy var editFieldsStackView = UIStackView.makeForStackView(axis: .vertical, spacing: 16, alignment: .center, distribution: .equalSpacing)
     private lazy var buttonsStackView = UIStackView.makeForStackView(axis: .horizontal, spacing: 11, alignment: .center, distribution: .fillProportionally)
