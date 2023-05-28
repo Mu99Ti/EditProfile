@@ -24,6 +24,23 @@ class DateTextField: UITextField, UITextFieldDelegate {
         return imageView
     }()
     
+    private lazy var datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        return datePicker
+    }()
+    
+    private lazy var doneToolbar: UIToolbar = {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        return toolbar
+    }()
+    
+    private lazy var doneButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(datePickerDoneButtonTapped))
+        return button
+    }()
+    
     // MARK: - Initializing View
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,8 +48,9 @@ class DateTextField: UITextField, UITextFieldDelegate {
         // MARK: - Add Subviews
         containerView.addSubview(calendarImageView)
         
+        inputView = datePicker
+        
         configure()
-        textFieldShouldBeginEditing(self)
     }
     
     @available(*, unavailable)
@@ -41,10 +59,7 @@ class DateTextField: UITextField, UITextFieldDelegate {
     }
     
     // MARK: - Overriden Methods
-    override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+    override open func textR``olderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
@@ -58,15 +73,32 @@ class DateTextField: UITextField, UITextFieldDelegate {
         backgroundColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 0.16)
         layer.borderColor = UIColor(red: 231/255, green: 231/255, blue: 231/255, alpha: 1).cgColor
         layer.borderWidth = 1
-        self.rightViewMode = .always
-        self.rightView = containerView
-        self.delegate = self
+        rightViewMode = .always
+        rightView = containerView
+        delegate = self
+//        textFieldShouldBeginEditing(self)
     }
     
+    @objc  private func datePickerDoneButtonTapped() {
+           self.endEditing(true)
+       }
+    
     internal func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == self {
-            return false
-        }
+//        if textField == self {
+//            return false
+//        }
+//        return true
+        self.inputView = datePicker
+        doneToolbar.sizeToFit()
+        doneToolbar.setItems([doneButton], animated: false)
+        self.inputAccessoryView = doneToolbar
         return true
     }
+    
+//    internal func textFieldDidBeginEditing(_ textField: UITextField) {
+//        self.inputView = datePicker
+//        doneToolbar.sizeToFit()
+//        doneToolbar.setItems([doneButton], animated: false)
+//        self.inputAccessoryView = doneToolbar
+//    }
 }
