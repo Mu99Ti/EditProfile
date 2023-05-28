@@ -10,9 +10,30 @@ import UIKit
 class DateTextField: UITextField, UITextFieldDelegate {
     
     // MARK: - Private Properties
-    private var padding: UIEdgeInsets = UIEdgeInsets(top: 13.5, left: 12, bottom: 13.5, right: 12)
+    private lazy var padding: UIEdgeInsets = UIEdgeInsets(top: 13.5, left: 12, bottom: 13.5, right: 12)
+    private lazy var doneToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 45))
     
-    private let containerView: UIView = {
+    private lazy var calendarDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter
+    }()
+    
+    private lazy var datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        return datePicker
+    }()
+    
+    private lazy var doneToolbarButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        barButton.title = "Done"
+        barButton.style = .done
+        return barButton
+    }()
+    
+    private lazy var containerView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 24))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

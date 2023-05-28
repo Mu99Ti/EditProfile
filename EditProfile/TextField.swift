@@ -42,6 +42,8 @@ class TextField: UITextField {
         backgroundColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 0.16)
         layer.borderColor = UIColor(red: 231/255, green: 231/255, blue: 231/255, alpha: 1).cgColor
         layer.borderWidth = 1
+        rightViewMode = .whileEditing
+        clearButtonMode = .whileEditing
     }
 }
 
