@@ -64,7 +64,6 @@
 		7B2C4A442A1DFA0B00173E45 = {
 			isa = PBXGroup;
 			children = (
-				7B6E35202A1F6985002A7E9F /* TextFieldType.swift */,
 				7B2C4A4F2A1DFA0B00173E45 /* EditProfile */,
 				7B2C4A682A1DFD7B00173E45 /* Resources */,
 				7B2C4A4E2A1DFA0B00173E45 /* Products */,
@@ -82,6 +81,7 @@
 		7B2C4A4F2A1DFA0B00173E45 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				7B6E35202A1F6985002A7E9F /* TextFieldType.swift */,
 				7B2C4A502A1DFA0B00173E45 /* AppDelegate.swift */,
 				7B2C4A542A1DFA0B00173E45 /* ViewController.swift */,
 				7B2C4A642A1DFB2900173E45 /* EditFieldView.swift */,

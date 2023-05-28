@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     internal var navigationBackButtonTapped: (() -> ())?
     
     private lazy var leftNavigationItemView = LeftNavigationItemView()
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
             saveButton.heightAnchor.constraint(equalToConstant: 48),
             saveButton.widthAnchor.constraint(equalToConstant: 161.5)
         ]
-        
+  
         NSLayoutConstraint.activate(mainStackViewConstraints)
         NSLayoutConstraint.activate(cancelButtonSizeConstraints)
         NSLayoutConstraint.activate(saveButtonSizeConstraints)
@@ -102,8 +102,8 @@ class ViewController: UIViewController {
     }
     
     private func configure() {
-        self.view.backgroundColor = .systemBackground
-        self.navigationItem.leftBarButtonItem = vcBarButtonItem
+        view.backgroundColor = .systemBackground
+        navigationItem.leftBarButtonItem = vcBarButtonItem
     }
 }
 
